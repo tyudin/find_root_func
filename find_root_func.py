@@ -37,9 +37,9 @@ def found_root(func: Callable, left_bound: float, right_bound: float, accuracy: 
     while (right_bound - left_bound) > 2 * accuracy:
         middle = (left_bound + right_bound) / 2
 
-        func_value = func(middle) # значение функции в середине отрезка
-        left_sign = math.copysign(1, func(left_bound)) # знак функции на левом конце
-        right_sign = math.copysign(1, func(right_bound)) # знак функции на правом конце
+        func_value = func(middle)  # значение функции в середине отрезка
+        left_sign = math.copysign(1, func(left_bound))  # знак функции на левом конце
+        right_sign = math.copysign(1, func(right_bound))  # знак функции на правом конце
 
         if func_value == 0:
             # невероятно, но попали в корень!
